@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD - Lista</title>
+</head>
+<body>
+    <h1>Lista de Pessoas</h1>
+    <ul>
+        {% for pessoa in pessoa %}
+            <li>
+                {{ pessoa.nome }} | {{ pessoa.email }} | {{ pessoa.linkedin }} | {{ pessoa.github }}
+                <a href="{{ url_for('edit', id=pessoa.id) }}">Editar</a>
+                <a href="{{ url_for('delete', id=pessoa.id) }}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('create') }}">Adicione uma nova Pessoa</a>
+</body>
+</html>
+

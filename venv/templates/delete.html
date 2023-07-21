@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD - Delete</title>
+</head>
+<body>
+    <h1>Deletar Pessoa</h1>
+    <p>Tem certeza que deseja deletar "{{ person.name }}"?</p>
+    <form method="post" action="{{ url_for('delete', id=pessoa.id) }}">
+        <input type="submit" value="Deletar">
+    </form>
+</body>
+</html>
